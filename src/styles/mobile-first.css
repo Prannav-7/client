@@ -1,0 +1,525 @@
+/* MOBILE FIRST RESPONSIVE DESIGN - COMPLETE OVERHAUL */
+
+/* ===========================================
+   GLOBAL MOBILE-FIRST FOUNDATIONS
+   =========================================== */
+
+/* Prevent all horizontal overflow at global level */
+html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+/* ===========================================
+   UNIVERSAL CONTAINER SYSTEM
+   =========================================== */
+
+/* Mobile-first containers */
+.container, .container-fluid, .flipkart-container, .product-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 10px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* ===========================================
+   HEADER & NAVIGATION MOBILE DESIGN
+   =========================================== */
+
+/* Header mobile optimization */
+.header, header {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.header-content, .nav-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 10px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+/* Navigation mobile-first */
+.nav-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  transform: translateY(-100%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+}
+
+.nav-menu.active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.nav-item {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* ===========================================
+   PRODUCT LAYOUT MOBILE-FIRST
+   =========================================== */
+
+/* Flipkart-style mobile-first design */
+.flipkart-style-page {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  background-color: #fafafa !important;
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+.flipkart-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.flipkart-product-layout {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: white !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  overflow: hidden !important;
+}
+
+/* Product image section - mobile first */
+.flipkart-image-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 12px !important;
+  background: #fafafa !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.flipkart-main-image {
+  width: 100% !important;
+  height: 240px !important;
+  background: white !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 15px !important;
+  margin: 0 auto 12px auto !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.flipkart-main-image img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* Product thumbnails mobile */
+.flipkart-thumbnails {
+  display: flex !important;
+  gap: 6px !important;
+  justify-content: center !important;
+  overflow-x: auto !important;
+  padding: 0 4px !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.flipkart-thumbnail {
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
+
+/* Product info section - mobile first */
+.flipkart-info-section {
+  width: 100% !important;
+  padding: 12px !important;
+  background: white !important;
+  box-sizing: border-box !important;
+}
+
+.flipkart-title {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #212121 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 8px !important;
+  word-wrap: break-word !important;
+}
+
+.flipkart-price-section {
+  margin: 12px 0 !important;
+}
+
+.flipkart-price-main {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: #212121 !important;
+}
+
+/* ===========================================
+   CONTACT FORM MOBILE-FIRST
+   =========================================== */
+
+/* Contact page mobile optimization */
+.contact-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.contact-form {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: white !important;
+  padding: 16px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  box-sizing: border-box !important;
+}
+
+.form-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+.form-input, .form-textarea {
+  width: 100% !important;
+  padding: 12px !important;
+  border: 2px solid #e9ecef !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  box-sizing: border-box !important;
+  font-family: inherit !important;
+}
+
+.form-button {
+  width: 100% !important;
+  padding: 14px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+/* ===========================================
+   HOME PAGE MOBILE-FIRST
+   =========================================== */
+
+.hero-section {
+  width: 100% !important;
+  padding: 20px 12px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+.hero-title {
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+  margin-bottom: 12px !important;
+  word-wrap: break-word !important;
+}
+
+.hero-subtitle {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 20px !important;
+  color: #666 !important;
+}
+
+/* Product grid mobile */
+.products-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+  padding: 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.product-card {
+  width: 100% !important;
+  background: white !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.product-image {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: contain !important;
+  background: #fafafa !important;
+  border-radius: 4px !important;
+  margin-bottom: 8px !important;
+}
+
+.product-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+  line-height: 1.3 !important;
+  word-wrap: break-word !important;
+}
+
+.product-price {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #212121 !important;
+  margin-bottom: 8px !important;
+}
+
+/* ===========================================
+   TABLET RESPONSIVE (min-width: 480px)
+   =========================================== */
+
+@media (min-width: 480px) {
+  .container, .flipkart-container {
+    padding: 0 16px !important;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  
+  .flipkart-main-image {
+    height: 280px !important;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .hero-title {
+    font-size: 28px !important;
+  }
+}
+
+/* ===========================================
+   DESKTOP RESPONSIVE (min-width: 768px)
+   =========================================== */
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px !important;
+    padding: 0 20px !important;
+  }
+  
+  .flipkart-container {
+    max-width: 1248px !important;
+    padding: 12px !important;
+  }
+  
+  /* Desktop product layout */
+  .flipkart-product-layout {
+    flex-direction: row !important;
+  }
+  
+  .flipkart-image-section {
+    flex: 0 0 400px !important;
+    border-bottom: none !important;
+    border-right: 1px solid #e0e0e0 !important;
+    padding: 24px !important;
+  }
+  
+  .flipkart-main-image {
+    height: 400px !important;
+    max-width: 350px !important;
+  }
+  
+  .flipkart-thumbnails {
+    gap: 8px !important;
+  }
+  
+  .flipkart-thumbnail {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  
+  .flipkart-info-section {
+    flex: 1 !important;
+    padding: 24px !important;
+  }
+  
+  .flipkart-title {
+    font-size: 24px !important;
+  }
+  
+  .flipkart-price-main {
+    font-size: 28px !important;
+  }
+  
+  /* Desktop navigation */
+  .nav-menu {
+    position: static !important;
+    flex-direction: row !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+  
+  .nav-item {
+    width: auto !important;
+    padding: 8px 16px !important;
+    border-bottom: none !important;
+  }
+  
+  /* Desktop product grid */
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .hero-title {
+    font-size: 36px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px !important;
+  }
+}
+
+/* ===========================================
+   LARGE DESKTOP (min-width: 1024px)
+   =========================================== */
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  
+  .hero-title {
+    font-size: 42px !important;
+  }
+}
+
+/* ===========================================
+   FORCE RESPONSIVE BEHAVIOR
+   =========================================== */
+
+/* Force all images to be responsive */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Force all containers to respect boundaries */
+div, section, article, main, aside {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Override any fixed widths that might cause issues */
+.fixed-width-override {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Emergency responsive fixes */
+.overflow-fix {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Mobile scroll improvements */
+.mobile-scroll {
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: auto !important;
+}
+
+/* ===========================================
+   UTILITY CLASSES FOR IMMEDIATE FIXES
+   =========================================== */
+
+.mobile-only {
+  display: block !important;
+}
+
+.desktop-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+  
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* Force text wrapping */
+.text-wrap {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+/* Emergency full-width class */
+.full-width {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}

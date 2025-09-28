@@ -1,0 +1,407 @@
+/* Price Alignment CSS - Comprehensive responsive price display fixes */
+
+/* Base Price Display Styles */
+.price-display {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price-current {
+  font-weight: bold;
+  color: #28a745;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.price-original {
+  color: #6c757d;
+  text-decoration: line-through;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  line-height: 1.2;
+}
+
+.price-discount {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Product Card Price Alignment */
+.product-card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.product-card-price .price-display {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card-price .price-current {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: #28a745;
+  font-weight: 700;
+}
+
+/* Cart Item Price Alignment */
+.cart-item-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.cart-item-price .price-current {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #28a745;
+}
+
+.cart-total-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+  min-width: 100px;
+}
+
+.cart-total-price .price-current {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #333;
+  font-weight: bold;
+}
+
+/* Checkout Price Summary Alignment */
+.checkout-price-summary {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+}
+
+.checkout-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.checkout-price-row:last-child {
+  border-bottom: none;
+  font-weight: bold;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  padding-top: 12px;
+}
+
+.checkout-price-label {
+  color: #666;
+  flex: 1;
+  text-align: left;
+}
+
+.checkout-price-value {
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+  min-width: 80px;
+}
+
+.checkout-price-total {
+  color: #28a745 !important;
+  font-weight: bold !important;
+  font-size: clamp(1.1rem, 3vw, 1.4rem) !important;
+}
+
+/* Product Details Price Section */
+.product-details-price {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+}
+
+.product-details-price .price-display {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.product-details-price .price-current {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: #28a745;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.product-details-price .price-original {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: #6c757d;
+}
+
+/* Order Summary Price Alignment */
+.order-summary-price {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+}
+
+.order-summary-header {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.order-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.order-summary-row.total {
+  border-top: 2px solid #dee2e6;
+  padding-top: 12px;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.order-summary-label {
+  color: #666;
+  flex: 1;
+}
+
+.order-summary-value {
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+  min-width: 80px;
+}
+
+.order-summary-total {
+  color: #28a745 !important;
+  font-weight: bold !important;
+}
+
+/* Responsive Price Adjustments */
+@media (max-width: 1200px) {
+  .price-current {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+  }
+  
+  .product-details-price .price-current {
+    font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .price-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .product-card-price .price-display {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-item-price {
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  .checkout-price-row {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .checkout-price-label {
+    min-width: 120px;
+  }
+  
+  .order-summary-row {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  
+  .product-details-price {
+    padding: 12px;
+    margin: 12px 0;
+  }
+  
+  .product-details-price .price-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-current {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+  
+  .product-details-price .price-current {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+  
+  .checkout-price-summary {
+    padding: 12px;
+  }
+  
+  .order-summary-price {
+    padding: 12px;
+  }
+  
+  .cart-item-price {
+    min-width: 70px;
+  }
+  
+  .cart-total-price {
+    min-width: 80px;
+  }
+  
+  .checkout-price-value,
+  .order-summary-value {
+    min-width: 70px;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+  }
+}
+
+/* Currency Symbol Styling */
+.currency-symbol {
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+/* Price Animation for Important Prices */
+.price-highlight {
+  animation: priceGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes priceGlow {
+  from {
+    text-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(40, 167, 69, 0.8), 0 0 15px rgba(40, 167, 69, 0.4);
+  }
+}
+
+/* Utility Classes */
+.price-free {
+  color: #28a745 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price-error {
+  color: #dc3545 !important;
+  font-weight: bold;
+}
+
+.price-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 2s infinite;
+  color: transparent;
+  border-radius: 4px;
+  height: 1.2em;
+  min-width: 60px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Table Price Alignment */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.price-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #495057;
+}
+
+.price-table .price-column {
+  text-align: right;
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.price-table .total-row {
+  background-color: #e3f2fd;
+  font-weight: bold;
+}
+
+.price-table .total-row .price-column {
+  color: #28a745;
+  font-size: 1.1em;
+}
+
+/* Fix for Number Alignment */
+.number-align {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Mono", Monaco, Inconsolata, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace;
+}
+
+/* Price Input Styling */
+.price-input {
+  text-align: right;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
